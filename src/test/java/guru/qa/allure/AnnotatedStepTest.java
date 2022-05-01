@@ -4,8 +4,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.sleep;
-
 public class AnnotatedStepTest {
 
     private static final String REPOSITORY = "selenide/selenide";
@@ -21,6 +19,5 @@ public class AnnotatedStepTest {
         steps.clickOnRepositoryLink(REPOSITORY);
         steps.openIssuesTab();
         steps.shouldSeeIssueWithNumber(ISSUE_NAME);
-        sleep(5000);
     }
 }
